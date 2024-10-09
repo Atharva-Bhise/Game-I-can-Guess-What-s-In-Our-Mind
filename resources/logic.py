@@ -1,3 +1,5 @@
+#Copyright (c) 2024 Atharva Bhise
+
 rowsList = []
 rearrangedRowsList = []
 resultRowsList = []
