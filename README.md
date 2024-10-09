@@ -37,6 +37,8 @@ To play the game locally:
 
 Make sure all necessary files (`styles.css`, `Guess.js`, etc.) are in the same folder as the HTML file.
 
+Enjoy playing the game and have fun guessing the words!
+
 ## Technologies Used
 - HTML
 - CSS
@@ -57,4 +59,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 See the LICENSE file for more information.
 
-Enjoy playing the game and have fun guessing the words!
