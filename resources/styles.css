@@ -1,0 +1,180 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.outerBox {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 80px;
+}
+
+button, input[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="button"]:hover {
+    background-color: #45a049;
+}
+
+.AlphaNum table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.AlphaNum th, .AlphaNum td {
+    border: 2px solid #ddd;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.AlphaNum th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.AlphaNum td {
+    background-color: #f9f9f9;
+}
+
+.AlphaNum td:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .outerBox {
+        width: 95%;
+    }
+
+    .AlphaNum table {
+        font-size: 14px;
+    }
+
+    input[type="number"], button, input[type="button"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.game-messages {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f8ff;
+    border: 1px solid #b0c4de;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+    text-align: center; 
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.resultWord {
+    font-weight: bold; 
+    font-size: 1.5em; 
+    color: #ff5733; 
+}
+.blur-background {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}

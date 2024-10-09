@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Can Guess What's In Our Mind</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="outerBox" id="content">
+        How Many Letters Are There: <input type="number" id="letterCount" required>
+        
+        <br><br>
+        <div class="AlphaNum">
+            <center>Click The Column Number Where The First Letter Of Your Word Appears.</center>
+            <center>And So On, Till The Last Letter. </center>
+            <table border="1" id="alphabetTable" height="500" width="600">
+                    <thead>
+                        <tr>
+                            <th><input type="button" class="columnButton" value="1"></th>
+                            <th><input type="button" class="columnButton" value="2"></th>
+                            <th><input type="button" class="columnButton" value="3"></th>
+                            <th><input type="button" class="columnButton" value="4"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                        </tr>
+                        <tr>
+                            <td>i</td>
+                            <td>j</td>
+                            <td>k</td>
+                            <td>l</td>
+                        </tr>
+                        <tr>
+                            <td>m</td>
+                            <td>n</td>
+                            <td>o</td>
+                            <td>p</td>
+                        </tr>
+                        <tr>
+                            <td>q</td>
+                            <td>r</td>
+                            <td>s</td>
+                            <td>t</td>
+                        </tr>
+                        <tr>
+                            <td>u</td>
+                            <td>v</td>
+                            <td>w</td>
+                            <td>x</td>
+                        </tr>
+                        <tr>
+                            <td>y</td>
+                            <td>z</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>                
+            </table>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            
+            <h2>I Can Guess The Word in Our Mind!!!</h2>
+            <p>How? Just Answer The Few Questions</p>
+            <button id="letsPlayButton">Let's Play!</button>
+        </div>
+    </div>
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <div id="gameMessages"></div>
+            <span class="close-button">&times;</span>
+            <h2>Surprise!!!</h2>
+            <p id="resultMessage"></p>
+        </div>
+    </div>
+
+    <script src="Guess.js"></script>
+</body>
+</html>
