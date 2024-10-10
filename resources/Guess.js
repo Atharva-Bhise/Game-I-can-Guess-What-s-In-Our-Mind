@@ -36,15 +36,24 @@ function startGame() {
         console.log("Game has started!"); 
     });
     document.getElementById('letterCount').addEventListener('input', function () {
-        numberOfLetters = parseInt(this.value);
+        if(document.getElementById('letterCount').value > 0)
+        {
+            numberOfLetters = parseInt(this.value);
 
-        rowsList = [];
-        rearrangedRowsList = [];
-        resultRowsList = [];
-        resultColumnsList = [];
-        resultWord = "";
+            rowsList = [];
+            rearrangedRowsList = [];
+            resultRowsList = [];
+            resultColumnsList = [];
+            resultWord = "";
 
-        setupColumnButtons();
+            setupColumnButtons();
+        }
+        else{
+            document.getElementById("errorMessage").innerHTML = `<strong style="color: red;">Number Should Greater Then 0.Try Again!!!</strong>`
+            setTimeout(function() {
+                location.reload();
+            }, 2500);
+        }
     });
 }
 
