@@ -8,12 +8,15 @@
 </head>
 <body>
     <div class="outerBox" id="content">
-        How Many Letters Are There: <input type="number" id="letterCount" required>
+        <input type="number" id="letterCount" required placeholder="Enter Here, The Total Number Of Letters Your Word Has?">
         
         <br><br>
         <div class="AlphaNum">
-            <center>Click The Column Number Where The First Letter Of Your Word Appears.</center>
-            <center>And So On, Till The Last Letter. </center>
+            <center id="Messages">
+                <b>Click The Column Number Where The First Letter Of Your Word Appears.<br>
+                Repeat This For Each Letter Of Your Word Until The Last Letter.
+                </b>
+            </center>
             <table border="1" id="alphabetTable" height="500" width="600">
                     <thead>
                         <tr>

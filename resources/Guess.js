@@ -115,7 +115,9 @@ function updateTable(rearrangedRowsList) {
         }
         tableBody.appendChild(row);  
     });
-
+    document.getElementById("Messages").innerHTML = `<strong style="font-size: 1.5em; color: red;">Again!!!</strong>
+                <b>Click The Column Number Where The First Letter Of Your Word Appears.
+                Repeat This For Each Letter Of Your Word Until The Last Letter.</b>`
     setupColumnButtons();
 }
 
