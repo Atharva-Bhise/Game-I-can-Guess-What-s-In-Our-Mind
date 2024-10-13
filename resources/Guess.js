@@ -39,20 +39,24 @@ function startGame() {
         if(document.getElementById('letterCount').value > 0)
         {
             numberOfLetters = parseInt(this.value);
-
-            rowsList = [];
-            rearrangedRowsList = [];
-            resultRowsList = [];
-            resultColumnsList = [];
-            resultWord = "";
-
-            setupColumnButtons();
+            
         }
         else{
             document.getElementById("errorMessage").innerHTML = `<strong style="color: red;">Number Should Greater Then 0.Try Again!!!</strong>`
             setTimeout(function() {
                 location.reload();
             }, 2500);
+        }
+    });
+    document.getElementById('letterCount').addEventListener('keydown', function(event){
+        if(event.key === 'Enter')
+        {
+            rowsList = [];
+            rearrangedRowsList = [];
+            resultRowsList = [];
+            resultColumnsList = [];
+            resultWord = "";
+            setupColumnButtons();
         }
     });
 }
