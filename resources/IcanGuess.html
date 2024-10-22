@@ -8,13 +8,11 @@
 </head>
 <body>
     <div class="outerBox" id="content">
-        <input type="number" id="letterCount" required placeholder="Enter Here, The Total Number Of Letters Your Word Has? Don't Forget To Press Enter Key">
-        <div id="errorMessage"></div>
         <br>
         <div class="AlphaNum">
             <center id="Messages">
                 <b>Click The Column Number Where The First Letter Of Your Word Appears.<br>
-                Repeat This For Each Letter Of Your Word Until The Last Letter.
+                Repeat This For Each Letter Of Your Word Till The Last Letter.
                 </b>
             </center>
             <table border="1" id="alphabetTable" height="500" width="600">
@@ -75,12 +73,15 @@
     </div>
     <div id="modal" class="modal">
         <div class="modal-content">
-            
+        
             <h2>I Can Guess The Word in Our Mind!!!</h2>
             <p>How? <br> Just Think Of A Word & Answer The Few Questions</p>
+            <input type="number" id="letterCount" required="required" placeholder="Enter Here, How Many Letters Your Word Has?">
+            <div id="errorMessage"></div>
             <button id="letsPlayButton">Let's Play!</button>
         </div>
     </div>
+
     <div id="resultModal" class="modal">
         <div class="modal-content">
             <div id="gameMessages"></div>

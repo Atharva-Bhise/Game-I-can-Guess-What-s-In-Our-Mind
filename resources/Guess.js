@@ -1,5 +1,4 @@
 //Copyright (c) 2024 Atharva Bhise
-
 let rowsList = [];
 let rearrangedRowsList = [];
 let resultRowsList = [];
@@ -12,51 +11,35 @@ let initialTable = [
     [2, ['c', 'g', 'k', 'o', 's', 'w']],
     [3, ['d', 'h', 'l', 'p', 't', 'x']]
 ];
+
 function showModal() {
     const modal = document.getElementById("modal");
     const contentToBlur = document.getElementById("content"); 
-
     modal.style.display = "block";
     contentToBlur.classList.add("blur-background"); 
-
 }
 
 function closeModal() {
     const modal = document.getElementById("modal");
     const contentToBlur = document.getElementById("content");
-
     modal.style.display = "none";
     contentToBlur.classList.remove("blur-background"); 
-
-    
 }
+
 function startGame() {
     document.getElementById('letsPlayButton').addEventListener('click', function() {
-        closeModal(); 
-        console.log("Game has started!"); 
-    });
-    document.getElementById('letterCount').addEventListener('input', function () {
-        if(document.getElementById('letterCount').value > 0)
-        {
-            numberOfLetters = parseInt(this.value);
-            
-        }
-        else{
-            document.getElementById("errorMessage").innerHTML = `<strong style="color: red;">Number Should Greater Then 0.Try Again!!!</strong>`
-            setTimeout(function() {
-                location.reload();
-            }, 2500);
-        }
-    });
-    document.getElementById('letterCount').addEventListener('keydown', function(event){
-        if(event.key === 'Enter')
-        {
+        const letterCountValue = document.getElementById("letterCount").value;
+        if (letterCountValue !== "" && letterCountValue > 0) {
+            numberOfLetters = parseInt(letterCountValue); 
             rowsList = [];
             rearrangedRowsList = [];
             resultRowsList = [];
             resultColumnsList = [];
             resultWord = "";
-            setupColumnButtons();
+            closeModal(); 
+            setupColumnButtons(); 
+        } else {
+            document.getElementById("errorMessage").innerHTML = `<strong style="color: red;">Please, Enter the Number Of Letters!</strong>`;
         }
     });
 }
@@ -68,9 +51,8 @@ function setupColumnButtons() {
             if (rowsList.length < numberOfLetters && numberOfLetters > 0) {
                 const columnNumber = parseInt(this.value);
                 rowsList.push(columnNumber - 1);
-
                 if (rowsList.length === numberOfLetters) {
-                    rearrangeTable(); 
+                    rearrangeTable();
                 }
             }
         });
@@ -86,9 +68,9 @@ function rearrangeTable() {
 
     addAdditionalColumns(rearrangedRowsList);
 
-    updateTable(rearrangedRowsList);
+    updateTable(rearrangedRowsList); 
 
-    setupResultSelection();
+    setupResultSelection(); 
 }
 
 function addAdditionalColumns(rearrangedRowsList) {
@@ -98,6 +80,7 @@ function addAdditionalColumns(rearrangedRowsList) {
         }
     });
 }
+
 
 function updateTable(rearrangedRowsList) {
     const tableBody = document.getElementById('alphabetTable').getElementsByTagName('tbody')[0];
@@ -118,7 +101,6 @@ function updateTable(rearrangedRowsList) {
     }
     tableHead.appendChild(columnRow);
 
-  
     rearrangedRowsList.forEach(rowData => {
         let row = document.createElement('tr');
         for (let i = 0; i < 7; i++) {
@@ -128,10 +110,11 @@ function updateTable(rearrangedRowsList) {
         }
         tableBody.appendChild(row);  
     });
-    document.getElementById("Messages").innerHTML = `<strong style="font-size: 1.5em; color: red;">Again!!!</strong>
-                <b>Click The Column Number Where The First Letter Of Your Word Appears.
-                Repeat This For Each Letter Of Your Word Until The Last Letter.</b>`
-    setupColumnButtons();
+
+    document.getElementById("Messages").innerHTML = `
+        <strong style="font-size: 1.5em; color: red;">Again!!!</strong>
+        <b>Click The Column Number Where The First Letter Of Your Word Appears.
+        Repeat This For Each Letter Of Your Word Till The Last Letter.</b>`;
 }
 
 function setupResultSelection() {
@@ -150,7 +133,6 @@ function setupResultSelection() {
         });
     }
 }
-
 
 function calculateResult() {
     let i = 0;
@@ -179,9 +161,7 @@ window.addEventListener("click", function(event) {
         modal.style.display = "none";
         location.reload();
     }
-    
 });
-
 
 window.onload = function() {
     showModal();
