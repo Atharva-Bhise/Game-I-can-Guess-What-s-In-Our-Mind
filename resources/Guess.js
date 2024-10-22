@@ -39,7 +39,7 @@ function startGame() {
             closeModal(); 
             setupColumnButtons(); 
         } else {
-            document.getElementById("errorMessage").innerHTML = `<strong style="color: red;">Please, Enter the Number Of Letters!</strong>`;
+            document.getElementById("errorMessage").innerHTML = `<strong style="color: red;">Please, Enter The Number Of Letters!</strong>`;
         }
     });
 }
