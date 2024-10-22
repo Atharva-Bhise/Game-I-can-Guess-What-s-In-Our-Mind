@@ -154,13 +154,13 @@ button:active, input[type="button"]:active {
     }
     .AlphaNum th, .AlphaNum td {
         padding: 8px; 
-        font-size: 12px; 
+        font-size: 14px; 
         word-wrap: break-word; 
         text-align: center;
     }
 
     input[type="number"], button, input[type="button"]{
-        font-size: 12px; 
+        font-size: 14px; 
         padding: 6px; 
     }
     input[type="number"]{
@@ -170,7 +170,7 @@ button:active, input[type="button"]:active {
     input::placeholder {
         font-weight: bold;
         color: #333333;
-        font-size: 12.5px;
+        font-size: 14px;
         opacity: 1;
         line-height: 1; 
         word-wrap: break-word; 
